@@ -16,7 +16,14 @@ class Crud extends CI_Controller{
         $this->load->view('data_barang', $data);
     }
 
+        public function tambah_data(){
+        $data = array(
+            'title' => 'Tambah Data Barang',
+        );
+        $this->load->view('v_create', $data);
+    }
 
+    
 }
 
 
