@@ -35,7 +35,7 @@ class Crud extends CI_Controller{
     }
 
     public function edit_data($id_barang){
-        $id_barang = $this->uri-segment(3);
+        $id_barang = $this->uri->segment(3);
 
         $data = array(
             'title' => 'Edit Data',
@@ -53,6 +53,11 @@ class Crud extends CI_Controller{
             'stok' => $this->input->post("stok"),
         );
         $this->M_crud->update_data($data, $id);
+    }
+
+    public function delete_data($id_barang){
+        $id['id_barang'] = $this->uri->segment(3);
+        $this->M_crud->delete_data($id);
     }
 }
 
