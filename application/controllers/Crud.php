@@ -43,6 +43,17 @@ class Crud extends CI_Controller{
         );
         $this->load->view('v_edit', $data);
     }
+
+    public function update_data(){
+        $id['id_barang'] = $this->input->post("id_barang");
+        $data = array(
+            'nama_barang' => $this->input->post("nama_barang"),
+            'jenis_barang' => $this->input->post("jenis_barang"),
+            'harga' => $this->input->post("harga"),
+            'stok' => $this->input->post("stok"),
+        );
+        $this->M_crud->update_data($data, $id);
+    }
 }
 
 
