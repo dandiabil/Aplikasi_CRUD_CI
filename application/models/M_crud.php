@@ -18,6 +18,14 @@ class M_crud extends CI_Model{
         }else return false;
     }
 
+    public function edit_data($id_barang){
+        $this->db->where('id_barang', $id_barang);
+        $query = $this->db->get('tbl_barang');
+        if($query){
+            return $query->row();
+        }else return false;
+    }
+
     
 }
 
