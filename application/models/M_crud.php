@@ -26,7 +26,19 @@ class M_crud extends CI_Model{
         }else return false;
     }
 
-    
+    public function update_data($data, $id){
+        $query = $this->db->update('tbl_barang', $data, $id);
+        if($query){
+            return true;
+        }else return false;
+    }
+
+    public function delete_data($id){
+        $query = $this->db->delete('tbl_barang', $id);
+        if($query){
+            return true;
+        }else return false;
+    }
 }
 
 ?>
