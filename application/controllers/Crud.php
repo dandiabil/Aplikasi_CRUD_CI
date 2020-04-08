@@ -33,6 +33,16 @@ class Crud extends CI_Controller{
 
         $this->M_crud->simpan_data($data);
     }
+
+    public function edit_data($id_barang){
+        $id_barang = $this->uri-segment(3);
+
+        $data = array(
+            'title' => 'Edit Data',
+            'data_barang' => $this->M_crud->edit($id_barang),
+        );
+        $this->load->view('v_edit', $data);
+    }
 }
 
 
