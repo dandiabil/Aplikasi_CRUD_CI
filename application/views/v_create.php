@@ -5,7 +5,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <html lang="en">
 <head>
 	<meta charset="utf-8">
-	<title>Aplikasi CRUD</title>
+	<title><?php echo $title ?></title>
 
 	<style type="text/css">
 
