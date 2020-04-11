@@ -64,13 +64,17 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	</style>
 </head>
 <body>
-
+<?php 
+		public function _construct(){
+        parent::_construct();
+	}
+	?>
 <div id="container">
 
 	<div id="body">
 		<h3>Aplikasi CRUD</h3>
 		<p><i>Create, Read, Update and Delete</i></p>
-		<a href="#" class="tambah">Tambah Data</a>
+		<a href="<?php base_url() ?>Crud/tmambah_data" class="tambah">Tambah Data</a>
 		<br><br>
 		<a href="#" class="daftar">Daftar Data</a>
 	</div>
