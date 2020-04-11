@@ -34,6 +34,8 @@ class Crud extends CI_Controller{
         );
 
         $this->M_crud->simpan_data($data);
+
+        redirect('Crud/');
     }
 
     public function edit_data($id_barang){
@@ -41,7 +43,7 @@ class Crud extends CI_Controller{
 
         $data = array(
             'title' => 'Edit Data',
-            'data_barang' => $this->M_crud->edit($id_barang),
+            'data_barang' => $this->M_crud->edit_data($id_barang),
         );
         $this->load->view('v_edit', $data);
     }
@@ -60,7 +62,9 @@ class Crud extends CI_Controller{
     public function delete_data($id_barang){
         $id['id_barang'] = $this->uri->segment(3);
         $this->M_crud->delete_data($id);
+        redirect('Crud/');
     }
+
 }
 
 
