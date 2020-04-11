@@ -1,5 +1,5 @@
 <?php
-defined('BASEPATH') OR exit('No direct script access allowed');
+defined('BASEPATH') OR exit('No direct script access allowed')
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -23,21 +23,21 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
         <?php 
             $no = 1;
-            foreach($v_tampildata as $data){
-                echo "<tr>";
-                echo "<td>".$no."</td>";
-                echo "<td>".$data['id_barang']."</td>";
-                echo "<td>".$data['nama_barang']."</td>";
-                echo "<td>".$data['jenis_barang']."</td>";
-                echo "<td>".$data['harga']."</td>";
-                echo "<td>".$data['stok']."</td>";
-                echo "<td>".
-                        "<a href=".base_url('index.php/crud/edit_data'.$data->id_barang).">Edit</a>".
-                        "<a href=".base_url('index.php/crud/delete_data'.$data->id_barang).">Hapus</a>"."</td>";
-                echo "</tr>";
-                $no++;
-            }
-        ?>
+            foreach($v_tampildata as $data){ ?>
+            <tr>
+                <td><?php echo $no++ ?></td>
+                <td><?php echo $data->id_barang ?></td>
+                <td><?php echo $data->nama_barang ?></td>
+                <td><?php echo $data->jenis_barang ?></td>
+                <td><?php echo $data->harga ?></td>
+                <td><?php echo $data->stok ?></td>
+                <td>
+                    <a href="<?php echo base_url() ?>crud/edit_data/<?php echo $data->id_barang ?>">Edit</a>
+                    <a href="<?php echo base_url() ?>crud/delete_data/<?php echo $data->id_barang ?>">Hapus</a>
+                </td>
+            </tr>
+
+            <?php } ?>
     </table>
     
 </body>
