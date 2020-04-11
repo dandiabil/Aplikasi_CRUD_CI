@@ -7,7 +7,9 @@ class Crud extends CI_Controller{
         parent::__construct();
         $this->load->model('M_crud');
         $this->load->database();
-        $this->load->helper('url');
+        $this->load->helper('url_helper');
+        $this->load->helper('form');
+        $this->load->library('form_validation');
     }
 
     public function index(){
