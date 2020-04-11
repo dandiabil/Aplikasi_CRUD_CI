@@ -4,10 +4,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class M_crud extends CI_Model{
 
     public function get_all(){
-        $this->db->select('*');
-        $this->db->from('tbl_barang');
-        $this->db->order_by('id_barang', 'DESC');
-        $query = $this->db->get();
+        $query = $this->db->select('*')->from('tbl_barang')->order_by('id_barang', 'DESC')->get();
         return $query->result_array();
     }
     
@@ -19,8 +16,7 @@ class M_crud extends CI_Model{
     }
 
     public function edit_data($id_barang){
-        $this->db->where('id_barang', $id_barang);
-        $query = $this->db->get('tbl_barang');
+        $query = $this->db->where('id_barang', $id_barang)->get('tbl_barang');
         if($query){
             return $query->row();
         }else return false;
