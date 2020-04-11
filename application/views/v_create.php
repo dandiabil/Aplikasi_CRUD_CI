@@ -51,19 +51,19 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	<div id="body">
 		<?php echo form_open(crud/simpan_data) ?>
 
-        <label for="text">ID Barang</label>
+        <label for="id_barang">ID Barang</label>
         <input type="text" name="id_barang" placeholder="Masukkan ID Barang">
 
-        <label for="text">Nama Barang</label>
+        <label for="nama_barang">Nama Barang</label>
         <input type="text" name="nama_barang" placeholder="Masukkan Nama Barang">
 
-        <label for="text">Jenis Barang</label>
+        <label for="jenis_barang">Jenis Barang</label>
         <input type="text" name="jenis_barang" placeholder="Masukkan Jenis Barang">
 
-        <label for="text">Harga Barang</label>
+        <label for="harga">Harga Barang</label>
         <input type="text" name="harga">
 
-        <label for="text">Stok Barang</label>
+        <label for="stok">Stok Barang</label>
         <input type="text" name="stok">
 
         <button type="submit">Simpan</button>
