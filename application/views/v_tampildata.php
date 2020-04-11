@@ -1,3 +1,6 @@
+<?php
+defined('BASEPATH') OR exit('No direct script access allowed');
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,6 +18,7 @@
             <th>Jenis Barang</th>
             <th>Harga Barang</th>
             <th>Stok Barang</th>
+            <th>Pilihan</th>
         </tr>
 
         <?php 
@@ -27,6 +31,9 @@
                 echo "<td>".$data['jenis_barang']."</td>";
                 echo "<td>".$data['harga']."</td>";
                 echo "<td>".$data['stok']."</td>";
+                echo "<td>".
+                        "<a href='<?php base_url() ?>Crud/edit_data/<?php $data->id_barang ?>'>Edit</a>".
+                        "<a href='<?php base_url() ?>Crud/delete_data/<?php $data->id_barang ?>'>Hapus</a>"."</td>";
                 echo "</tr>";
                 $no++;
             }
