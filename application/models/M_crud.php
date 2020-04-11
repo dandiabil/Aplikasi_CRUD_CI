@@ -5,7 +5,7 @@ class M_crud extends CI_Model{
 
     public function get_all(){
         $query = $this->db->select('*')->from('tbl_barang')->order_by('id_barang', 'DESC')->get();
-        return $query->result_array();
+        return $query->result();
     }
     
     public function simpan_data($data){
