@@ -7,7 +7,7 @@
 </head>
 <body>
 
-    <table>
+    <table border="1px solid black" style="border-collapse:collapse">
         <tr>
             <th>No</th>
             <th>ID Barang</th>
@@ -19,7 +19,7 @@
 
         <?php 
             $no = 1;
-            foreach($result as $data){
+            foreach($v_tampildata as $data){
                 echo "<tr>";
                 echo "<td>".$no."</td>";
                 echo "<td>".$data['id_barang']."</td>";

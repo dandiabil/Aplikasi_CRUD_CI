@@ -6,14 +6,16 @@ class Crud extends CI_Controller{
     public function __construct(){
         parent::__construct();
         $this->load->model('M_crud');
+        $this->load->database();
+        $this->load->helper('url');
     }
 
     public function index(){
         $data = array(
             'title' => 'Data Barang',
-            'data_barang' => $this->M_crud->getAll(),
+            'v_tampildata' => $this->M_crud->get_all(),
         );
-        $this->load->view('data_barang', $data);
+        $this->load->view('v_tampildata', $data);
     }
 
         public function tambah_data(){
