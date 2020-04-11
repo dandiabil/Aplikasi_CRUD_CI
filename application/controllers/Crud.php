@@ -11,14 +11,19 @@ class Crud extends CI_Controller{
     }
 
     public function index(){
+        $this->load->view('v_home');
+    }
+
+    public function tampil_data(){
         $data = array(
-            'title' => 'Data Barang',
+            'title' => 'Daftar Data',
             'v_tampildata' => $this->M_crud->get_all(),
         );
         $this->load->view('v_tampildata', $data);
+
     }
 
-        public function tambah_data(){
+    public function tambah_data(){
         $data = array(
             'title' => 'Tambah Data Barang',
         );
@@ -62,6 +67,9 @@ class Crud extends CI_Controller{
     public function delete_data($id_barang){
         $id['id_barang'] = $this->uri->segment(3);
         $this->M_crud->delete_data($id);
+
+        
+
         redirect('Crud/');
     }
 
