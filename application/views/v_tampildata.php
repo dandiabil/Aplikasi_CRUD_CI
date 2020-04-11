@@ -32,8 +32,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 echo "<td>".$data['harga']."</td>";
                 echo "<td>".$data['stok']."</td>";
                 echo "<td>".
-                        "<a href='<?php base_url() ?>Crud/edit_data/<?php $data->id_barang ?>'>Edit</a>".
-                        "<a href='<?php base_url() ?>Crud/delete_data/<?php $data->id_barang ?>'>Hapus</a>"."</td>";
+                        "<a href=".base_url('crud/edit_data'.$data->id_barang).">Edit</a>".
+                        "<a href=".base_url('crud/delete_data'.$data->id_barang).">Hapus</a>"."</td>";
                 echo "</tr>";
                 $no++;
             }
