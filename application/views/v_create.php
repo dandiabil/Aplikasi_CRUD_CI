@@ -24,14 +24,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 		margin: 0 15px 0 15px;
 	}
 
-	p.footer {
-		text-align: right;
-		font-size: 9px;
-		border-top: 1px solid #D0D0D0;
-		line-height: 32px;
-		padding: 0 10px 0 10px;
-		margin: 20px 0 0 0;
-	}
 
 	#container {
 		padding : 30px 20px;
@@ -49,8 +41,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <div id="container">
 
 	<div id="body">
-		<?php echo form_open(crud/simpan_data) ?>
-
+		<?php echo form_open('crud/simpan_data') ?>
         <label for="id_barang">ID Barang</label>
         <input type="text" name="id_barang" placeholder="Masukkan ID Barang">
 
@@ -68,11 +59,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
         <button type="submit">Simpan</button>
         <button type="reset">Reset</button>
-
 		<?php echo form_close() ?>
-	</div>
 
-	<p class="footer">Page rendered in <strong>{elapsed_time}</strong> seconds. <?php echo  (ENVIRONMENT === 'development') ?  'CodeIgniter Version <strong>' . CI_VERSION . '</strong>' : '' ?></p>
+	</div>
 </div>
 
 </body>
