@@ -41,7 +41,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <div id="container">
 
 	<div id="body">
-		<?php echo form_open('crud/simpan_data') ?>
+		<?php echo form_open('Crud/simpan_data') ?>
         <label for="id_barang">ID Barang</label>
         <input type="text" name="id_barang" placeholder="Masukkan ID Barang">
 
