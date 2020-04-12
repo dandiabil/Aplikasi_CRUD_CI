@@ -24,17 +24,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 		margin: 0 15px 0 15px;
 	}
 
-	p.footer {
-		text-align: right;
-		font-size: 9px;
-		border-top: 1px solid #D0D0D0;
-		line-height: 32px;
-		padding: 0 10px 0 10px;
-		margin: 20px 0 0 0;
-	}
 
 	#container {
-		padding : 30px 20px;
 		margin: 80px auto;
 		width : 350px;
 		border: 1px solid #D0D0D0;
@@ -49,13 +40,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <div id="container">
 
 	<div id="body">
-		<?php echo form_open(crud/update_data) ?>
-
-        <label for="id_barang">ID Barang</label>
-        <input type="text" name="id_barang" placeholder="Masukkan ID Barang" value="<?php echo $v_tampildata->id_barang ?>">
-
+		<?php echo form_open('Crud/update_data') ?>
+		
         <label for="nama_barang">Nama Barang</label>
         <input type="text" name="nama_barang" placeholder="Masukkan Nama Barang" value="<?php echo $v_tampildata->nama_barang ?>">
+		
+		<input type="hidden" name="id_barang" value="<?php echo $v_tampildata->id_barang ?>">
 
         <label for="jenis_barang">Jenis Barang</label>
         <input type="text" name="jenis_barang" placeholder="Masukkan Jenis Barang" value="<?php echo $v_tampildata->jenis_barang ?>">
@@ -72,7 +62,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 		<?php echo form_close() ?>
 	</div>
 
-	<p class="footer">Page rendered in <strong>{elapsed_time}</strong> seconds. <?php echo  (ENVIRONMENT === 'development') ?  'CodeIgniter Version <strong>' . CI_VERSION . '</strong>' : '' ?></p>
+
 </div>
 
 </body>
