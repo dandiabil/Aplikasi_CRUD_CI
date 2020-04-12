@@ -70,9 +70,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	<div id="body">
 		<h3>Aplikasi CRUD</h3>
 		<p><i>Create, Read, Update and Delete</i></p>
-		<a href="<?php base_url() ?>Crud/tambah_data" class="tambah">Tambah Data</a>
+		<a href="<?php base_url() ?>tambah_data" class="tambah">Tambah Data</a>
 		<br><br>
-		<a href="<?php base_url() ?>Crud/tampil_data" class="daftar">Daftar Data</a>
+		<a href="<?php base_url() ?>tampil_data" class="daftar">Daftar Data</a>
 	</div>
 
 	<p class="footer">Page rendered in <strong>{elapsed_time}</strong> seconds. <?php echo  (ENVIRONMENT === 'development') ?  'CodeIgniter Version <strong>' . CI_VERSION . '</strong>' : '' ?></p>
