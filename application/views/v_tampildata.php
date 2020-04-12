@@ -10,6 +10,9 @@ defined('BASEPATH') OR exit('No direct script access allowed')
 </head>
 <body>
 
+    <a href="<?php echo base_url() ?>index.php/Crud/Home">Kembali ke Halaman Utama</a>
+    <a href="<?php echo base_url() ?>index.php/Crud/tambah_data">Tambah Data</a>
+
     <table border="1px solid black" style="border-collapse:collapse">
         <tr>
             <th>No</th>
@@ -32,8 +35,8 @@ defined('BASEPATH') OR exit('No direct script access allowed')
                 <td><?php echo $data->harga ?></td>
                 <td><?php echo $data->stok ?></td>
                 <td>
-                    <a href="<?php echo base_url() ?>crud/edit_data/<?php echo $data->id_barang ?>">Edit</a>
-                    <a href="<?php echo base_url() ?>crud/delete_data/<?php echo $data->id_barang ?>">Hapus</a>
+                    <a href="<?php echo base_url() ?>index.php/Crud/edit_data/<?php echo $data->id_barang ?>">Edit</a>
+                    <a href="<?php echo base_url() ?>index.php/Crud/delete_data/<?php echo $data->id_barang ?>">Hapus</a>
                 </td>
             </tr>
 
